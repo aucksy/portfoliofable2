@@ -284,8 +284,8 @@ footer em{font-family:var(--serif);font-style:italic;color:var(--mut)}
   .hevy-phone{max-width:190px}
 }
 @media (max-width:700px){
-  .nav-links,.nav-cta{display:none}
-  #menuBtn{display:block}
+  .nav-links,.nav-cta,.logo{display:none}
+  #menuBtn{display:block;margin-left:auto}
   .phone{width:min(27vw,120px)}
   .phone img{aspect-ratio:9/19}
   .tiles{gap:10px}
@@ -293,7 +293,8 @@ footer em{font-family:var(--serif);font-style:italic;color:var(--mut)}
   .gametiles{grid-template-columns:1fr 1fr}
   .gametiles .tile:first-child{grid-column:1/-1;aspect-ratio:2.1}
   .hero-content{padding-bottom:15vh}
-  .app{top:calc(var(--navh) + 8px + var(--i)*10px)}
+  /* phones: drop the sticky-stack (cards are taller than the viewport) — plain vertical scroll instead */
+  .app{position:relative;top:auto;transform:none!important;will-change:auto;min-height:0;scroll-margin-top:84px}
 }
 </style>
 </head>
@@ -737,7 +738,7 @@ function frame(){
   if(!reduced && heroVisible && heroBg && y <= heroH){
     heroBg.style.transform = 'translate3d(0,' + (y*0.28).toFixed(1) + 'px,0) scale(1.04)';
   }
-  if(deckVisible && cards.length){
+  if(deckVisible && cards.length && !mobile){
     for(var i=0;i<cards.length-1;i++){
       var next = offs[i+1], me = offs[i];
       if(!next || !me) continue;
@@ -752,6 +753,11 @@ function frame(){
       }else if(card.style.transform){
         card.style.transform = ''; card.style.setProperty('--cover','0');
       }
+    }
+  }else if(mobile){
+    /* clear any desktop-stack transforms if the viewport was resized down */
+    for(var k=0;k<cards.length;k++){
+      if(cards[k].style.transform){ cards[k].style.transform=''; cards[k].style.setProperty('--cover','0'); }
     }
   }
 }
