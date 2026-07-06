@@ -293,8 +293,18 @@ footer em{font-family:var(--serif);font-style:italic;color:var(--mut)}
   .gametiles{grid-template-columns:1fr 1fr}
   .gametiles .tile:first-child{grid-column:1/-1;aspect-ratio:2.1}
   .hero-content{padding-bottom:15vh}
-  /* phones: drop the sticky-stack (cards are taller than the viewport) — plain vertical scroll instead */
-  .app{position:relative;top:auto;transform:none!important;will-change:auto;min-height:0;scroll-margin-top:84px}
+  /* keep the sticky-stack + scale animation, but compact each card so it fits one phone screen
+     (the desktop stack works because the card fits the viewport; make that true on phones too) */
+  .app{top:calc(54px + var(--i)*8px);padding:22px 20px 24px;gap:14px}
+  .app-num{margin-bottom:12px}
+  .app-id{gap:12px;margin-bottom:12px}
+  .app-id img{width:46px;height:46px}
+  .app-hook{margin-bottom:12px}
+  .app ul{gap:9px}
+  .app li{font-size:13.5px;padding-left:20px}
+  .app li::before{top:8px}
+  .app-meta{margin-top:14px}
+  .phones{margin-top:2px}
 }
 </style>
 </head>
@@ -718,7 +728,7 @@ function measure(){
   var sy = w.scrollY;
   offs = cards.map(function(c,i){
     var r = c.getBoundingClientRect();
-    return { top: r.top + sy, h: c.offsetHeight, stick: navH + (mobile?8:16) + i*(mobile?10:12) };
+    return { top: r.top + sy, h: c.offsetHeight, stick: (mobile?54:navH+16) + i*(mobile?8:12) };
   });
 }
 var heroIO = new IntersectionObserver(function(e){ heroVisible = e[0].isIntersecting; },{threshold:0});
@@ -738,7 +748,7 @@ function frame(){
   if(!reduced && heroVisible && heroBg && y <= heroH){
     heroBg.style.transform = 'translate3d(0,' + (y*0.28).toFixed(1) + 'px,0) scale(1.04)';
   }
-  if(deckVisible && cards.length && !mobile){
+  if(deckVisible && cards.length){
     for(var i=0;i<cards.length-1;i++){
       var next = offs[i+1], me = offs[i];
       if(!next || !me) continue;
@@ -753,11 +763,6 @@ function frame(){
       }else if(card.style.transform){
         card.style.transform = ''; card.style.setProperty('--cover','0');
       }
-    }
-  }else if(mobile){
-    /* clear any desktop-stack transforms if the viewport was resized down */
-    for(var k=0;k<cards.length;k++){
-      if(cards[k].style.transform){ cards[k].style.transform=''; cards[k].style.setProperty('--cover','0'); }
     }
   }
 }
