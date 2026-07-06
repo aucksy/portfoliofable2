@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Aakash Pahuja &mdash; Product Designer &times; Vibe Coder</title>
+<meta name="description" content="Products aren't built with prompts. They're forged through obsession. Portfolio of Aakash Pahuja — product designer, PM at American Express and vibe coder shipping flawless digital experiences.">
+<meta name="theme-color" content="#0b0a09">
+<link rel="canonical" href="https://aucksy.github.io/portfoliofable2/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aakash Pahuja — Product Designer × Vibe Coder">
+<meta property="og:description" content="Products aren't built with prompts. They're forged through obsession.">
+<meta property="og:image" content="https://aucksy.github.io/portfoliofable2/assets/og.jpg">
+<meta property="og:url" content="https://aucksy.github.io/portfoliofable2/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0a09'/%3E%3Ccircle cx='32' cy='38' r='13' fill='%23ff7a3c'/%3E%3Ccircle cx='32' cy='30' r='9' fill='%23ffb46a'/%3E%3Ccircle cx='32' cy='24' r='4' fill='%23ffe3b3'/%3E%3C/svg%3E">
+<link rel="preload" as="image" href="assets/hero-d.webp" media="(min-width:701px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width:700px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Aakash Pahuja","jobTitle":"Senior Associate - Digital Product Management","worksFor":{"@type":"Organization","name":"American Express"},"url":"https://aucksy.github.io/portfoliofable2/","email":"mailto:connect@aakashpahuja.in","sameAs":["https://instagram.com/aakashpahuja108","https://github.com/aucksy","https://hevy.com/user/aucksy"]}
+</script>
+<style>
+/* ============ RESET / TOKENS ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0b0a09; --bg2:#0f0d0b; --panel:rgba(255,255,255,.032);
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --tx:#efe9e2; --mut:#a39a8f; --dim:#6f685f;
+  --em1:#ffd27a; --em2:#ff9a3c; --em3:#ff5e3a;
+  --glow:rgba(255,130,50,.32);
+  --disp:'Space Grotesk',system-ui,sans-serif;
+  --serif:'Instrument Serif',Georgia,serif;
+  --navh:72px;
+}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip;background:var(--bg)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{
+  font-family:var(--disp); color:var(--tx);
+  font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+::selection{background:var(--em2);color:#1a0f05}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+section{scroll-margin-top:90px}
+.wrap{width:min(1180px,92vw);margin:0 auto}
+
+/* ============ GRAIN ============ */
+#grain{position:fixed;inset:-50%;width:200%;height:200%;pointer-events:none;z-index:80;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");}
+
+/* ============ NAV ============ */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--navh);
+  display:flex;align-items:center;transition:transform .45s cubic-bezier(.22,1,.36,1),background .35s ease,border-color .35s ease;
+  border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(11,10,9,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-color:var(--line)}
+nav.hide{transform:translateY(-110%)}
+body.menu-open nav{z-index:120;background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;border-color:transparent;transform:none}
+.nav-in{width:min(1240px,94vw);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:700;font-size:19px;letter-spacing:.02em;display:flex;align-items:center;gap:9px}
+.logo .dot{width:9px;height:9px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--em1),var(--em3));box-shadow:0 0 12px var(--glow)}
+.logo b{background:linear-gradient(100deg,var(--em1),var(--em3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.nav-links{display:flex;gap:34px;font-size:14.5px;color:var(--mut)}
+.nav-links a{position:relative;padding:6px 0;transition:color .25s}
+.nav-links a:hover{color:var(--tx)}
+.nav-links a::after{content:'';position:absolute;left:0;bottom:0;height:1.5px;width:0;background:linear-gradient(90deg,var(--em1),var(--em3));transition:width .35s cubic-bezier(.22,1,.36,1)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{font-size:13.5px;font-weight:600;border:1px solid var(--line2);padding:9px 20px;border-radius:99px;transition:border-color .3s,background .3s,color .3s}
+.nav-cta:hover{border-color:var(--em2);color:var(--em1)}
+#menuBtn{display:none;background:none;border:0;cursor:pointer;padding:10px;z-index:120}
+#menuBtn span{display:block;width:24px;height:2px;background:var(--tx);margin:5px 0;border-radius:2px;transition:transform .35s ease,opacity .3s ease}
+body.menu-open #menuBtn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+body.menu-open #menuBtn span:nth-child(2){opacity:0}
+body.menu-open #menuBtn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+#menu{position:fixed;inset:0;z-index:110;background:rgba(12,10,8,.94);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);
+  display:flex;flex-direction:column;justify-content:center;padding:0 9vw;gap:6px;
+  opacity:0;visibility:hidden;transition:opacity .4s ease,visibility 0s .4s}
+body.menu-open #menu{opacity:1;visibility:visible;transition:opacity .4s ease}
+#menu a{font-size:clamp(34px,9vw,52px);font-weight:600;padding:10px 0;color:var(--tx);opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s cubic-bezier(.22,1,.36,1)}
+#menu a em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--em2);margin-right:14px;font-size:.55em}
+body.menu-open #menu a{opacity:1;transform:none}
+body.menu-open #menu a:nth-child(2){transition-delay:.06s}
+body.menu-open #menu a:nth-child(3){transition-delay:.12s}
+body.menu-open #menu a:nth-child(4){transition-delay:.18s}
+body.menu-open #menu a:nth-child(5){transition-delay:.24s}
+
+/* ============ HERO ============ */
+#hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:clip}
+.hero-bg{position:absolute;inset:-6% 0;z-index:1;will-change:transform}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-bg .full{opacity:0;transition:opacity .9s ease}
+.hero-bg .full.ok{opacity:1}
+.hero-shade{position:absolute;inset:0;z-index:2;background:
+  linear-gradient(180deg,rgba(11,10,9,.42) 0%,rgba(11,10,9,.18) 30%,rgba(11,10,9,.42) 58%,rgba(11,10,9,.94) 100%)}
+@media (max-width:700px){.hero-shade{background:
+  linear-gradient(180deg,rgba(11,10,9,.5) 0%,rgba(11,10,9,.3) 26%,rgba(11,10,9,.68) 52%,rgba(11,10,9,.97) 100%)}}
+#embers{position:absolute;inset:0;z-index:3;pointer-events:none;mix-blend-mode:screen}
+.hero-content{position:relative;z-index:4;text-align:center;padding:0 5vw 12vh}
+.eyebrow{font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--mut);margin-bottom:26px;font-weight:500}
+.eyebrow b{color:var(--em1);font-weight:600}
+h1{font-size:clamp(38px,6.6vw,92px);line-height:1.06;font-weight:600;letter-spacing:-.02em;text-wrap:balance;
+  text-shadow:0 4px 40px rgba(0,0,0,.55)}
+h1 .wm{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.12em;margin-bottom:-.12em}
+h1 .w{display:inline-block;transform:translateY(115%);transition:transform 1s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+body.loaded h1 .w{transform:none}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:.005em;
+  background:linear-gradient(100deg,var(--em1),var(--em2) 45%,var(--em3));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 22px var(--glow))}
+.hero-sub{max-width:620px;margin:28px auto 0;color:#cfc7bd;font-size:clamp(15px,1.6vw,18px);line-height:1.7;
+  opacity:0;transform:translateY(18px);transition:opacity .9s ease .75s,transform .9s cubic-bezier(.22,1,.36,1) .75s}
+body.loaded .hero-sub{opacity:1;transform:none}
+.hero-ctas{display:flex;gap:16px;justify-content:center;margin-top:38px;flex-wrap:wrap;
+  opacity:0;transform:translateY(18px);transition:opacity .9s ease .95s,transform .9s cubic-bezier(.22,1,.36,1) .95s}
+body.loaded .hero-ctas{opacity:1;transform:none}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:99px;font-weight:600;font-size:15px;
+  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,border-color .3s,color .3s;will-change:transform}
+.btn-fire{background:linear-gradient(100deg,var(--em2),var(--em3));color:#1c0d04;box-shadow:0 10px 34px -8px var(--glow)}
+.btn-fire:hover{box-shadow:0 14px 44px -6px var(--glow)}
+.btn-ghost{border:1px solid var(--line2);color:var(--tx)}
+.btn-ghost:hover{border-color:var(--em2);color:var(--em1)}
+.scroll-cue{position:relative;z-index:4;margin:0 auto;padding-bottom:26px;width:1px}
+.scroll-cue i{display:block;width:1px;height:52px;background:linear-gradient(180deg,transparent,var(--em2));animation:cue 2.1s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}45%{transform:scaleY(1);transform-origin:top}55%{transform:scaleY(1);transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+@media (prefers-reduced-motion:reduce){.scroll-cue i{animation:none}}
+
+/* ============ SECTION CHROME ============ */
+.sec-head{margin-bottom:56px}
+.sec-tag{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--em2);font-weight:600;display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.sec-tag::after{content:'';height:1px;width:64px;background:linear-gradient(90deg,var(--em2),transparent)}
+.sec-title{font-size:clamp(30px,4.4vw,58px);line-height:1.1;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.sec-title em{font-family:var(--serif);font-style:italic;font-weight:400;
+  background:linear-gradient(100deg,var(--em1),var(--em3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sec-sub{color:var(--mut);max-width:560px;margin-top:16px;font-size:16.5px}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .85s ease var(--d,0s),transform .85s cubic-bezier(.22,1,.36,1) var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}h1 .w{transform:none;transition:none}.hero-sub,.hero-ctas{opacity:1;transform:none;transition:none}}
+
+/* ============ ABOUT ============ */
+#about{padding:130px 0 90px;position:relative}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(40px,6vw,90px);align-items:center}
+.pcard{position:relative;max-width:400px;justify-self:center}
+.pcard::before{content:'';position:absolute;inset:-12%;background:radial-gradient(circle at 50% 45%,var(--glow),transparent 65%);filter:blur(8px);z-index:0}
+.pcard img{position:relative;z-index:1;border-radius:22px;transform:rotate(-2.5deg);border:1px solid var(--line2);
+  box-shadow:0 40px 90px -30px rgba(0,0,0,.8);transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.pcard:hover img{transform:rotate(-.5deg) scale(1.015)}
+.pcard .tape{position:absolute;z-index:2;top:-14px;left:50%;transform:translateX(-50%) rotate(2deg);width:110px;height:30px;
+  background:rgba(255,210,140,.16);border:1px solid rgba(255,210,140,.18);border-radius:3px;-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.about-txt p{color:#cfc7bd;font-size:clamp(16px,1.75vw,19px);line-height:1.75;margin-top:22px}
+.about-txt p b{color:var(--tx);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px}
+.chip{font-size:13px;color:var(--mut);border:1px solid var(--line);border-radius:99px;padding:8px 16px;letter-spacing:.02em}
+.chip b{color:var(--em1);font-weight:600;margin-right:6px}
+
+/* ============ MARQUEE ============ */
+.marq{border-block:1px solid var(--line);padding:18px 0;overflow:clip;background:var(--bg2)}
+.marq-track{display:flex;gap:0;width:max-content;animation:marq 36s linear infinite}
+.marq span{font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);white-space:nowrap;padding-right:12px}
+.marq span i{font-style:normal;color:var(--em2);padding:0 14px}
+@keyframes marq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq-track{animation:none}}
+
+/* ============ WORK / APP DECK ============ */
+#work{padding:130px 0 60px}
+.deck{display:flex;flex-direction:column;gap:36px}
+.app{--ac:#ff9a3c;position:sticky;top:calc(var(--navh) + 16px + var(--i)*12px);
+  background:linear-gradient(165deg,rgba(255,255,255,.05),rgba(255,255,255,.015) 55%),var(--bg2);
+  border:1px solid var(--line);border-radius:26px;overflow:clip;
+  min-height:min(74vh,680px);display:grid;grid-template-columns:1fr 1.15fr;gap:20px;
+  padding:clamp(26px,3.6vw,54px);will-change:transform;transform-origin:top center;
+  box-shadow:0 -18px 50px -30px rgba(0,0,0,.85)}
+.app::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(58% 70% at 82% 8%,color-mix(in srgb,var(--ac) 13%,transparent),transparent 70%)}
+.app::after{content:'';position:absolute;inset:0;background:#0b0a09;opacity:var(--cover,0);pointer-events:none}
+.app-info{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center}
+.app-num{font-size:13px;letter-spacing:.28em;color:var(--dim);margin-bottom:22px}
+.app-num b{color:var(--ac);font-weight:600}
+.app-id{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.app-id img{width:58px;height:58px;border-radius:15px;border:1px solid var(--line2);box-shadow:0 8px 26px -8px rgba(0,0,0,.7)}
+.app-id h3{font-size:clamp(24px,2.6vw,34px);font-weight:600;letter-spacing:-.015em}
+.app-hook{font-family:var(--serif);font-style:italic;font-size:clamp(17px,1.9vw,21px);color:color-mix(in srgb,var(--ac) 78%,#fff);margin-bottom:22px}
+.app ul{list-style:none;display:flex;flex-direction:column;gap:13px;max-width:460px}
+.app li{color:#c9c1b7;font-size:15px;line-height:1.55;padding-left:22px;position:relative}
+.app li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;
+  background:var(--ac);box-shadow:0 0 10px color-mix(in srgb,var(--ac) 70%,transparent)}
+.app-meta{margin-top:26px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.phones{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:0}
+.phone{width:clamp(118px,12.5vw,182px);background:#161311;border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:7px;
+  box-shadow:0 30px 70px -22px rgba(0,0,0,.75);transition:transform .55s cubic-bezier(.22,1,.36,1)}
+.phone img{border-radius:19px;aspect-ratio:9/19.4;object-fit:cover;width:100%}
+.phones .phone:nth-child(1){transform:rotate(-7deg) translate(16px,16px);z-index:1}
+.phones .phone:nth-child(2){transform:translateY(-8px);z-index:3}
+.phones .phone:nth-child(3){transform:rotate(7deg) translate(-16px,16px);z-index:2}
+.app:hover .phones .phone:nth-child(1){transform:rotate(-9deg) translate(10px,12px)}
+.app:hover .phones .phone:nth-child(2){transform:translateY(-16px)}
+.app:hover .phones .phone:nth-child(3){transform:rotate(9deg) translate(-10px,12px)}
+
+/* ============ CAREER ============ */
+#career{padding:130px 0}
+.career-card{background:linear-gradient(165deg,rgba(0,111,208,.10),rgba(255,255,255,.015) 60%),var(--bg2);
+  border:1px solid var(--line);border-radius:26px;padding:clamp(30px,4.5vw,60px);position:relative;overflow:clip}
+.career-card::before{content:'';position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(55% 65% at 12% 0%,rgba(0,111,208,.16),transparent 70%)}
+.role-line{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:38px;position:relative;z-index:1}
+.role-line h3{font-size:clamp(19px,2.2vw,26px);font-weight:600}
+.amex{font-size:13px;font-weight:700;letter-spacing:.06em;color:#fff;background:#016FD0;border-radius:6px;padding:7px 13px}
+.proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;position:relative;z-index:1}
+.proj{border:1px solid var(--line);border-radius:18px;padding:28px;background:rgba(255,255,255,.02);transition:border-color .35s,transform .35s cubic-bezier(.22,1,.36,1)}
+.proj:hover{border-color:rgba(0,140,255,.4);transform:translateY(-4px)}
+.pill{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;border-radius:99px;padding:6px 14px;margin-bottom:16px}
+.pill.now{color:#7fd4ff;border:1px solid rgba(90,190,255,.35);background:rgba(60,160,255,.08)}
+.pill.done{color:#8ee8b4;border:1px solid rgba(110,230,160,.3);background:rgba(80,220,140,.07)}
+.proj h4{font-size:18.5px;font-weight:600;margin-bottom:12px;letter-spacing:-.01em}
+.proj p{color:#b9b1a6;font-size:14.8px;line-height:1.65}
+.before{margin-top:34px;color:#b9b1a6;font-size:15.5px;line-height:1.75;max-width:900px;position:relative;z-index:1}
+.before b{color:var(--tx);font-weight:600}
+
+/* ============ PLAY ============ */
+#play{padding:130px 0 40px}
+.play-block{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,80px);align-items:center;padding:70px 0;border-top:1px solid var(--line)}
+#play .play-block:first-of-type{border-top:0;padding-top:20px}
+.play-tag{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--em2);font-weight:600;margin-bottom:16px}
+.play-block h3{font-size:clamp(24px,3vw,38px);font-weight:600;letter-spacing:-.015em;line-height:1.15;text-wrap:balance}
+.quote{font-family:var(--serif);font-style:italic;font-size:clamp(18px,2.1vw,23px);color:#d8d0c5;margin-top:20px;line-height:1.5}
+.quote::before{content:'\201C';color:var(--em2)}
+.quote::after{content:'\201D';color:var(--em2)}
+.play-note{color:var(--mut);font-size:15px;margin-top:16px;line-height:1.7}
+.play-link{display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-weight:600;font-size:15px;color:var(--em1);border-bottom:1px solid rgba(255,154,60,.35);padding-bottom:4px;transition:gap .3s,border-color .3s}
+.play-link:hover{gap:14px;border-color:var(--em2)}
+.bignum{font-size:clamp(62px,9vw,128px);font-weight:700;letter-spacing:-.04em;line-height:1;
+  background:linear-gradient(100deg,var(--em1),var(--em2) 55%,var(--em3));-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 28px rgba(255,130,50,.22));font-variant-numeric:tabular-nums}
+.bignum small{font-size:.34em;font-weight:600;letter-spacing:0}
+.lift-cap{color:var(--mut);margin-top:10px;font-size:15px}
+.lift-cap b{color:var(--tx)}
+.hevy-phone{max-width:230px;justify-self:center;transform:rotate(2.5deg)}
+.hevy-phone img{aspect-ratio:auto}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.tile{position:relative;border-radius:16px;overflow:clip;border:1px solid var(--line);
+  transition:transform .5s cubic-bezier(.22,1,.36,1),border-color .4s;display:block}
+.tile img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.22,1,.36,1)}
+.tile:hover{transform:translateY(-6px);border-color:var(--em2)}
+.tile:hover img{transform:scale(1.06)}
+.tile .lab{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:12px;font-weight:600;letter-spacing:.06em;
+  background:linear-gradient(180deg,transparent,rgba(8,6,5,.88));display:flex;align-items:center;gap:7px;color:var(--tx)}
+.tile .lab svg{flex:none}
+.gtiles .tile{aspect-ratio:.9}
+.gametiles .tile{aspect-ratio:1.55}
+
+/* ============ CONNECT ============ */
+#connect{padding:150px 0 60px;text-align:center;position:relative;overflow:clip}
+#connect::before{content:'';position:absolute;left:50%;bottom:-40%;transform:translateX(-50%);width:900px;height:600px;
+  background:radial-gradient(closest-side,rgba(255,130,50,.14),transparent);pointer-events:none}
+.connect-title{font-size:clamp(36px,6vw,76px);font-weight:600;letter-spacing:-.025em;line-height:1.08;text-wrap:balance}
+.connect-title em{font-family:var(--serif);font-style:italic;font-weight:400;
+  background:linear-gradient(100deg,var(--em1),var(--em3));-webkit-background-clip:text;background-clip:text;color:transparent}
+.email-btn{display:inline-flex;align-items:center;gap:12px;margin-top:44px;font-size:clamp(17px,2.4vw,24px);font-weight:600;
+  padding:20px 42px;border-radius:99px;background:linear-gradient(100deg,var(--em2),var(--em3));color:#1c0d04;
+  box-shadow:0 16px 50px -12px var(--glow);transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;will-change:transform}
+.email-btn:hover{box-shadow:0 20px 60px -10px var(--glow)}
+.socials{display:flex;gap:14px;justify-content:center;margin-top:36px;flex-wrap:wrap}
+.soc{display:inline-flex;align-items:center;gap:9px;font-size:14.5px;font-weight:500;color:var(--mut);
+  border:1px solid var(--line);border-radius:99px;padding:11px 22px;transition:color .3s,border-color .3s,transform .3s}
+.soc:hover{color:var(--em1);border-color:var(--em2);transform:translateY(-3px)}
+footer{border-top:1px solid var(--line);padding:34px 0 46px;text-align:center;color:var(--dim);font-size:13.5px;line-height:1.9}
+footer em{font-family:var(--serif);font-style:italic;color:var(--mut)}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:900px){
+  .about-grid{grid-template-columns:1fr;gap:48px}
+  .pcard{max-width:300px}
+  .app{grid-template-columns:1fr;min-height:0;gap:30px;padding-bottom:36px}
+  .app-info{order:1}
+  .phones{order:2}
+  .proj-grid{grid-template-columns:1fr}
+  .play-block{grid-template-columns:1fr;gap:36px;padding:56px 0}
+  .hevy-phone{max-width:190px}
+}
+@media (max-width:700px){
+  .nav-links,.nav-cta{display:none}
+  #menuBtn{display:block}
+  .phone{width:min(27vw,120px)}
+  .phone img{aspect-ratio:9/19}
+  .tiles{gap:10px}
+  .tile .lab{font-size:10.5px;padding:20px 8px 8px;letter-spacing:.03em}
+  .gametiles{grid-template-columns:1fr 1fr}
+  .gametiles .tile:first-child{grid-column:1/-1;aspect-ratio:2.1}
+  .hero-content{padding-bottom:15vh}
+  .app{top:calc(var(--navh) + 8px + var(--i)*10px)}
+}
+</style>
+</head>
+<body>
+
+<div id="grain" aria-hidden="true"></div>
+
+<nav id="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="logo" href="#hero"><span class="dot"></span>aakash<b>.</b>pahuja</a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#career">Career</a>
+      <a href="#play">Play</a>
+      <a href="#connect">Connect</a>
+    </div>
+    <a class="nav-cta mag" href="mailto:connect@aakashpahuja.in">Say hello</a>
+    <button id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div id="menu" aria-hidden="true">
+  <a href="#work"><em>01</em>Work</a>
+  <a href="#career"><em>02</em>Career</a>
+  <a href="#play"><em>03</em>Play</a>
+  <a href="#connect"><em>04</em>Connect</a>
+  <a href="mailto:connect@aakashpahuja.in"><em>&rarr;</em>Say hello</a>
+</div>
+
+<!-- ================= HERO ================= -->
+<header id="hero">
+  <div class="hero-bg" id="heroBg" aria-hidden="true">
+    <img class="lqip" alt="" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAQABwDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwDBhht4hkRh9wxz2qvPp0mf3Q3A88DpUUUshAB4IrX03VDAjAruz7UStuhxvszISKOLm43cHlaqXJiaZjEpVOwNXr64864ZyvGckVQkeMuSBgVKRTP/2Q==">
+    <picture>
+      <source media="(max-width:700px)" srcset="assets/hero-m.webp">
+      <img class="full" id="heroImg" src="assets/hero-d.webp" fetchpriority="high" decoding="async"
+        alt="A dreamlike creative studio at night: glowing clouds, ember sparks, a guitar, dumbbells, pizza and a monitor full of wireframes.">
+    </picture>
+    <div class="hero-shade"></div>
+  </div>
+  <canvas id="embers" aria-hidden="true"></canvas>
+  <div class="hero-content">
+    <p class="eyebrow">Aakash Pahuja &middot; Product Designer <b>&times;</b> Vibe Coder</p>
+    <h1>
+      <span class="wm"><span class="w" style="--d:.05s">Products</span></span>
+      <span class="wm"><span class="w" style="--d:.11s">aren&rsquo;t</span></span>
+      <span class="wm"><span class="w" style="--d:.17s">built</span></span>
+      <span class="wm"><span class="w" style="--d:.23s">with</span></span>
+      <span class="wm"><span class="w" style="--d:.29s">prompts.</span></span>
+      <br>
+      <span class="wm"><span class="w" style="--d:.41s">They&rsquo;re</span></span>
+      <span class="wm"><span class="w" style="--d:.47s">forged</span></span>
+      <span class="wm"><span class="w" style="--d:.53s">through</span></span>
+      <span class="wm"><span class="w" style="--d:.59s"><em>obsession</em>.</span></span>
+    </h1>
+    <p class="hero-sub">I design, build and ship digital experiences end-to-end &mdash; and I sweat the last 2% most people never notice. Users feel it anyway.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-fire mag" href="#work">See the work &darr;</a>
+      <a class="btn btn-ghost mag" href="#connect">Say hello</a>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><i></i></div>
+</header>
+
+<main>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="pcard reveal">
+      <span class="tape"></span>
+      <img src="assets/portrait.webp" width="900" height="1200" loading="lazy" decoding="async"
+        alt="Aakash Pahuja in his studio at night, guitar in hand, black coffee on the desk.">
+    </div>
+    <div class="about-txt">
+      <div class="sec-tag reveal">Hello &middot; 01</div>
+      <h2 class="sec-title reveal" style="--d:.08s">Design is how it works &mdash; <em>and how it feels.</em></h2>
+      <p class="reveal" style="--d:.16s">I&rsquo;m a <b>passionate product designer and vibe coder</b> who loves creating flawless digital experiences. By day I do product management at American Express; by night I design, code and ship my own apps &mdash; every flow, every empty state, every haptic.</p>
+      <p class="reveal" style="--d:.24s">Deeply caring about the <b>end user</b> isn&rsquo;t a line on my resume. It&rsquo;s why everything I ship has an undo, a dark mode, and copy written for the person having a bad day.</p>
+      <div class="chips">
+        <span class="chip reveal" style="--d:.30s"><b>9+</b> years in product @ Amex</span>
+        <span class="chip reveal" style="--d:.36s"><b>6</b> apps designed &amp; shipped solo</span>
+        <span class="chip reveal" style="--d:.42s"><b>0</b> templates used</span>
+        <span class="chip reveal" style="--d:.48s"><b>&infin;</b> black coffee</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marq" aria-hidden="true">
+  <div class="marq-track">
+    <span>Empty states<i>&#10022;</i>Undo everywhere<i>&#10022;</i>Dark mode<i>&#10022;</i>Micro-copy<i>&#10022;</i>Offline-first<i>&#10022;</i>Reduced motion<i>&#10022;</i>Haptics<i>&#10022;</i>The last 2%<i>&#10022;</i></span>
+    <span>Empty states<i>&#10022;</i>Undo everywhere<i>&#10022;</i>Dark mode<i>&#10022;</i>Micro-copy<i>&#10022;</i>Offline-first<i>&#10022;</i>Reduced motion<i>&#10022;</i>Haptics<i>&#10022;</i>The last 2%<i>&#10022;</i></span>
+  </div>
+</div>
+
+<!-- ================= WORK ================= -->
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag reveal">Work &middot; 02</div>
+      <h2 class="sec-title reveal" style="--d:.08s">Six ideas, forged <em>into apps.</em></h2>
+      <p class="sec-sub reveal" style="--d:.16s">Designed, built and shipped end-to-end. No team, no templates &mdash; just problems I cared about and the obsession to finish them properly.</p>
+    </div>
+    <div class="deck" id="deck">
+
+      <article class="app" style="--i:0;--ac:#34d399">
+        <div class="app-info">
+          <div class="app-num"><b>01</b> / 06 &mdash; ANDROID</div>
+          <div class="app-id"><img src="assets/icon-spends.webp" alt="" loading="lazy" decoding="async"><h3>Spends</h3></div>
+          <p class="app-hook">Know what&rsquo;s actually left.</p>
+          <ul>
+            <li>Smart Cycle budgets by your salary and each card&rsquo;s own billing cycle &mdash; not the calendar month.</li>
+            <li>Reads bank SMS on-device with one-tap add &mdash; and learns your categories and what to ignore.</li>
+            <li>Recurring autopilot, category splits, home-screen widgets and encrypted Drive backup.</li>
+          </ul>
+          <div class="app-meta">Private &middot; Offline-first &middot; ~25 Indian banks parsed</div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/shot-spends-analytics.webp" alt="Spends analytics screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-spends-home.webp" alt="Spends home screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-spends-recurring.webp" alt="Spends recurring payments screen" loading="lazy" decoding="async"></div>
+        </div>
+      </article>
+
+      <article class="app" style="--i:1;--ac:#a78bfa">
+        <div class="app-info">
+          <div class="app-num"><b>02</b> / 06 &mdash; ANDROID</div>
+          <div class="app-id"><img src="assets/icon-digest.webp" alt="" loading="lazy" decoding="async"><h3>Notification Digest</h3></div>
+          <p class="app-hook">A calmer phone, without missing what matters.</p>
+          <ul>
+            <li>Intercepts the noise and delivers clean, scheduled digests &mdash; OTPs, calls and messages stay real-time.</li>
+            <li>An inbox that works like email: search, filters, swipes and deep links back to the exact thread.</li>
+            <li>A quiet counter of every interruption you never felt.</li>
+          </ul>
+          <div class="app-meta">Kotlin &middot; Jetpack Compose &middot; Material 3</div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/shot-digest-inbox.webp" alt="Notification Digest inbox" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-digest-home.webp" alt="Notification Digest dashboard" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-digest-selector.webp" alt="Notification Digest app selector" loading="lazy" decoding="async"></div>
+        </div>
+      </article>
+
+      <article class="app" style="--i:2;--ac:#f472b6">
+        <div class="app-info">
+          <div class="app-num"><b>03</b> / 06 &mdash; ANDROID</div>
+          <div class="app-id"><img src="assets/icon-colorcloset.webp" alt="" loading="lazy" decoding="async"><h3>ColorCloset</h3></div>
+          <p class="app-hook">Outfits from the colours you already own.</p>
+          <ul>
+            <li>A swipeable deck of colour pairings built only from your wardrobe &mdash; double-tap to save, mark worn.</li>
+            <li>Tuned to your skin tone on the 10-point Monk scale, grounded in real colour science.</li>
+            <li>The gap engine names the one colour that unlocks the most new looks.</li>
+          </ul>
+          <div class="app-meta">4 wardrobes &middot; Pantone-referenced dataset</div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/shot-colorcloset-skintone.webp" alt="ColorCloset skin tone selector" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-colorcloset-home.webp" alt="ColorCloset style deck" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-colorcloset-buy.webp" alt="ColorCloset what to buy screen" loading="lazy" decoding="async"></div>
+        </div>
+      </article>
+
+      <article class="app" style="--i:3;--ac:#7dd3fc">
+        <div class="app-info">
+          <div class="app-num"><b>04</b> / 06 &mdash; ANDROID</div>
+          <div class="app-id"><img src="assets/icon-pause.webp" alt="" loading="lazy" decoding="async"><h3>Pause</h3></div>
+          <p class="app-hook">A minimal doom-scrolling interrupter.</p>
+          <ul>
+            <li>Watches the foreground app; after your chosen stretch of continuous scrolling, a calm glassmorphic overlay appears.</li>
+            <li>Not a blocker &mdash; it breaks the momentum and hands the choice back to you.</li>
+            <li>No accounts, no analytics, nothing ever leaves the device.</li>
+          </ul>
+          <div class="app-meta">Interrupt the autopilot &middot; Let the user choose</div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/shot-pause-home.webp" alt="Pause home screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-pause-styles.webp" alt="Pause interrupt style settings" loading="lazy" decoding="async"></div>
+        </div>
+      </article>
+
+      <article class="app" style="--i:4;--ac:#fb923c">
+        <div class="app-info">
+          <div class="app-num"><b>05</b> / 06 &mdash; ANDROID</div>
+          <div class="app-id"><img src="assets/icon-forgeai.webp" alt="" loading="lazy" decoding="async"><h3>ForgeAI</h3></div>
+          <p class="app-hook">Your gym. Your AI coach. Your lifetime progress.</p>
+          <ul>
+            <li>One conversation drives everything &mdash; &ldquo;bench 80 for 8, 7, 6&rdquo; becomes structured training data.</li>
+            <li>Progressive-Overload Coach: last session &rarr; today&rsquo;s target &rarr; and the why behind it.</li>
+            <li>Bring a Claude or OpenAI key &mdash; or run fully offline with the built-in local coach.</li>
+          </ul>
+          <div class="app-meta">AI fitness OS &middot; demo for gym owners</div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/shot-forgeai-chat.webp" alt="ForgeAI chat screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-forgeai-home.webp" alt="ForgeAI home screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-forgeai-analytics.webp" alt="ForgeAI analytics screen" loading="lazy" decoding="async"></div>
+        </div>
+      </article>
+
+      <article class="app" style="--i:5;--ac:#fbbf24">
+        <div class="app-info">
+          <div class="app-num"><b>06</b> / 06 &mdash; ANDROID</div>
+          <div class="app-id"><img src="assets/icon-bragbuddy.webp" alt="" loading="lazy" decoding="async"><h3>BragBuddy</h3></div>
+          <p class="app-hook">Twenty seconds a day. An always-ready appraisal doc.</p>
+          <ul>
+            <li>Speak your day; it becomes clean, categorised bullets organised around your own appraisal framework.</li>
+            <li>At review time: a crisp, curated summary you paste straight into the form.</li>
+            <li>Anonymous and local-first &mdash; audio never leaves the phone.</li>
+          </ul>
+          <div class="app-meta">Voice-first &middot; works instantly, no setup</div>
+        </div>
+        <div class="phones">
+          <div class="phone"><img src="assets/shot-brag-goals.webp" alt="BragBuddy goals screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-brag-home.webp" alt="BragBuddy home screen" loading="lazy" decoding="async"></div>
+          <div class="phone"><img src="assets/shot-brag-summary.webp" alt="BragBuddy summary screen" loading="lazy" decoding="async"></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAREER ================= -->
+<section id="career">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag reveal">Career &middot; 03</div>
+      <h2 class="sec-title reveal" style="--d:.08s">Product management, <em>at enterprise scale.</em></h2>
+    </div>
+    <div class="career-card reveal" style="--d:.1s">
+      <div class="role-line">
+        <span class="amex">AMERICAN EXPRESS</span>
+        <h3>Sr. Associate &mdash; Digital Product Management</h3>
+      </div>
+      <div class="proj-grid">
+        <div class="proj">
+          <span class="pill now">Current</span>
+          <h4>ComXHub &mdash; Intake &amp; Governance Portal</h4>
+          <p>Driving product strategy for an enterprise portal that modernises how customer communications are created, governed and delivered across markets &mdash; one digital entry point for the entire lifecycle, inside a large multi-year transformation program.</p>
+        </div>
+        <div class="proj">
+          <span class="pill done">Completed</span>
+          <h4>Raven Migration</h4>
+          <p>Led end-to-end discovery and migration of hundreds of legacy communication templates across 19 markets to a modern platform &mdash; reverse-engineering undocumented workflows and training engineering teams on the framework that made it repeatable.</p>
+        </div>
+      </div>
+      <p class="before">Before that: nearly a decade at Amex across <b>UAT delivery</b> (90+ projects, 500+ communications) and <b>customer-operations leadership</b> &mdash; plus a string of founder ventures along the way: a tech consultancy, a D2C apparel brand, an online grocery store and a music-gear brand. Product mindset, learned the hard way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLAY ================= -->
+<section id="play">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag reveal">Play &middot; 04</div>
+      <h2 class="sec-title reveal" style="--d:.08s">The obsession <em>doesn&rsquo;t clock out.</em></h2>
+    </div>
+
+    <div class="play-block">
+      <div>
+        <div class="play-tag reveal">Iron</div>
+        <div class="bignum reveal" style="--d:.06s"><span id="kg">0</span> <small>kg</small></div>
+        <p class="lift-cap reveal" style="--d:.12s">lifted since 2022 &mdash; every rep logged on <b>Hevy</b>. <span style="color:var(--dim)">(Roughly one adult T-rex, if you were wondering.)</span></p>
+        <p class="quote reveal" style="--d:.18s">This is what keeps me sane and joyful.</p>
+        <a class="play-link reveal" style="--d:.24s" href="https://hevy.com/user/aucksy" target="_blank" rel="noopener">Follow the log on Hevy <span>&#8599;</span></a>
+      </div>
+      <div class="phone hevy-phone reveal" style="--d:.15s"><img src="assets/hevy.webp" alt="Hevy workout tracker profile" loading="lazy" decoding="async"></div>
+    </div>
+
+    <div class="play-block">
+      <div>
+        <div class="play-tag reveal">Strings &amp; voice</div>
+        <h3 class="reveal" style="--d:.06s">Guitar, voice &amp; a camera.</h3>
+        <p class="quote reveal" style="--d:.12s">This is what keeps me calm &mdash; and guilt-free when the gaming runs long.</p>
+        <p class="play-note reveal" style="--d:.18s">Covers, mostly &mdash; recorded on the same desk the apps are built on.</p>
+      </div>
+      <div class="tiles gtiles">
+        <a class="tile reveal" style="--d:.08s" href="https://www.instagram.com/reel/DUdT5r1kp9N/" target="_blank" rel="noopener">
+          <img src="assets/guitar-1.webp" alt="Aakash singing with guitar - reel one" loading="lazy" decoding="async">
+          <span class="lab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#ffd27a"/></svg>Watch reel</span>
+        </a>
+        <a class="tile reveal" style="--d:.16s" href="https://www.instagram.com/reel/DSPxuoskiJu/" target="_blank" rel="noopener">
+          <img src="assets/guitar-2.webp" alt="Aakash singing with guitar - reel two" loading="lazy" decoding="async">
+          <span class="lab"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M8 5v14l11-7z" fill="#ffd27a"/></svg>Watch reel</span>
+        </a>
+        <span class="tile reveal" style="--d:.24s">
+          <img src="assets/guitar-3.webp" alt="Aakash performing" loading="lazy" decoding="async">
+          <span class="lab">Off stage</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="play-block">
+      <div>
+        <div class="play-tag reveal">PS5</div>
+        <h3 class="reveal" style="--d:.06s">Three worlds I keep coming back to.</h3>
+        <p class="play-note reveal" style="--d:.12s">Great games are great product design &mdash; ruthless onboarding, honest difficulty, reward curves that respect you. I take notes.</p>
+      </div>
+      <div class="tiles gametiles">
+        <span class="tile reveal" style="--d:.08s"><img src="assets/game-eldenring.webp" alt="Elden Ring" loading="lazy" decoding="async"><span class="lab">Elden Ring</span></span>
+        <span class="tile reveal" style="--d:.16s"><img src="assets/game-godofwar.webp" alt="God of War" loading="lazy" decoding="async"><span class="lab">God of War</span></span>
+        <span class="tile reveal" style="--d:.24s"><img src="assets/game-wukong.webp" alt="Black Myth: Wukong" loading="lazy" decoding="async"><span class="lab">Black Myth: Wukong</span></span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= CONNECT ================= -->
+<section id="connect">
+  <div class="wrap">
+    <div class="sec-tag reveal" style="justify-content:center">Connect &middot; 05</div>
+    <h2 class="connect-title reveal" style="--d:.08s">Let&rsquo;s build something<br>people <em>love.</em></h2>
+    <a class="email-btn mag reveal" style="--d:.16s" href="mailto:connect@aakashpahuja.in">connect@aakashpahuja.in</a>
+    <div class="socials">
+      <a class="soc reveal" style="--d:.22s" href="https://instagram.com/aakashpahuja108" target="_blank" rel="noopener">Instagram <span>&#8599;</span></a>
+      <a class="soc reveal" style="--d:.28s" href="https://github.com/aucksy" target="_blank" rel="noopener">GitHub <span>&#8599;</span></a>
+      <a class="soc reveal" style="--d:.34s" href="https://hevy.com/user/aucksy" target="_blank" rel="noopener">Hevy <span>&#8599;</span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Designed &amp; vibe-coded by Aakash Pahuja &mdash; <em>forged with obsession, black coffee &amp; Claude.</em><br>
+    &copy; 2026 &middot; No templates were harmed.
+  </div>
+</footer>
+
+<script>
+(function(){
+'use strict';
+var d=document, w=window;
+var reduced = w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var fine = w.matchMedia('(pointer: fine)').matches;
+var mobile = w.matchMedia('(max-width: 700px)').matches;
+
+function qs(s,c){return (c||d).querySelector(s)}
+function qsa(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+function clamp(v,a,b){return v<a?a:v>b?b:v}
+
+/* ---------- hero image fade-in + loaded state ---------- */
+var heroImg = qs('#heroImg');
+function markLoaded(){ d.body.classList.add('loaded'); }
+if(heroImg){
+  if(heroImg.complete && heroImg.naturalWidth){ heroImg.classList.add('ok'); markLoaded(); }
+  else{
+    heroImg.addEventListener('load', function(){ heroImg.classList.add('ok'); markLoaded(); });
+    setTimeout(markLoaded, 900); /* never hold the headline hostage */
+  }
+}else{ markLoaded(); }
+
+/* ---------- nav ---------- */
+var nav = qs('#nav'), lastY = 0;
+function navTick(y){
+  nav.classList.toggle('scrolled', y > 24);
+  if(y > 140 && y - lastY > 6) nav.classList.add('hide');
+  else if(lastY - y > 6 || y < 140) nav.classList.remove('hide');
+  lastY = y;
+}
+
+/* ---------- mobile menu (fixed-body scroll lock) ---------- */
+var menuBtn = qs('#menuBtn'), menu = qs('#menu'), savedY = 0, menuOpen = false;
+function setMenu(open){
+  menuOpen = open;
+  menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+  if(open){
+    savedY = w.scrollY;
+    d.body.classList.add('menu-open');
+    d.body.style.position='fixed'; d.body.style.top=(-savedY)+'px';
+    d.body.style.left='0'; d.body.style.right='0';
+  }else{
+    d.body.classList.remove('menu-open');
+    d.body.style.position=''; d.body.style.top=''; d.body.style.left=''; d.body.style.right='';
+    w.scrollTo(0, savedY);
+  }
+}
+if(menuBtn){
+  menuBtn.addEventListener('click', function(){ setMenu(!menuOpen); });
+  qsa('#menu a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+}
+
+/* ---------- reveals ---------- */
+var io = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+},{threshold:.12, rootMargin:'0px 0px -6% 0px'});
+qsa('.reveal').forEach(function(el){ io.observe(el); });
+
+/* ---------- kg counter ---------- */
+var kgEl = qs('#kg'), kgDone = false;
+function easeOut(t){ return 1 - Math.pow(1 - t, 4); }
+var kgIO = new IntersectionObserver(function(entries){
+  if(kgDone || !entries[0].isIntersecting) return;
+  kgDone = true; kgIO.disconnect();
+  if(reduced){ kgEl.textContent = '9,775'; return; }
+  var t0 = null;
+  function step(ts){
+    if(!t0) t0 = ts;
+    var p = clamp((ts - t0)/1800, 0, 1);
+    kgEl.textContent = Math.round(easeOut(p)*9775).toLocaleString('en-US');
+    if(p < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+},{threshold:.5});
+if(kgEl) kgIO.observe(kgEl);
+
+/* ---------- cached geometry (never per-frame rects) ---------- */
+var heroBg = qs('#heroBg'), hero = qs('#hero');
+var deck = qs('#deck'), cards = qsa('.app'), offs = [];
+var heroH = 0, navH = 72, deckVisible = true, heroVisible = true;
+function measure(){
+  heroH = hero ? hero.offsetHeight : 0;
+  navH = nav ? nav.offsetHeight : 72;
+  var sy = w.scrollY;
+  offs = cards.map(function(c,i){
+    var r = c.getBoundingClientRect();
+    return { top: r.top + sy, h: c.offsetHeight, stick: navH + (mobile?8:16) + i*(mobile?10:12) };
+  });
+}
+var heroIO = new IntersectionObserver(function(e){ heroVisible = e[0].isIntersecting; },{threshold:0});
+if(hero) heroIO.observe(hero);
+var deckIO = new IntersectionObserver(function(e){ deckVisible = e[0].isIntersecting; },{threshold:0});
+if(deck) deckIO.observe(deck);
+
+/* ---------- rAF loop: parallax + deck stack ---------- */
+var ticking = false;
+function onScroll(){
+  if(!ticking){ ticking = true; requestAnimationFrame(frame); }
+}
+function frame(){
+  ticking = false;
+  var y = w.scrollY;
+  navTick(y);
+  if(!reduced && heroVisible && heroBg && y <= heroH){
+    heroBg.style.transform = 'translate3d(0,' + (y*0.28).toFixed(1) + 'px,0) scale(1.04)';
+  }
+  if(deckVisible && cards.length){
+    for(var i=0;i<cards.length-1;i++){
+      var next = offs[i+1], me = offs[i];
+      if(!next || !me) continue;
+      var pos = next.top - y;                    /* next card's top in viewport */
+      var start = me.stick + me.h;               /* touching my bottom */
+      var end = next.stick;                      /* fully stacked */
+      var p = clamp((start - pos)/Math.max(start - end, 1), 0, 1);
+      var card = cards[i];
+      if(p > 0){
+        card.style.transform = 'scale(' + (1 - p*0.055).toFixed(4) + ') translateZ(0)';
+        card.style.setProperty('--cover', (p*0.5).toFixed(3));
+      }else if(card.style.transform){
+        card.style.transform = ''; card.style.setProperty('--cover','0');
+      }
+    }
+  }
+}
+w.addEventListener('scroll', onScroll, {passive:true});
+w.addEventListener('resize', function(){ mobile = w.matchMedia('(max-width: 700px)').matches; measure(); onScroll(); });
+w.addEventListener('load', function(){ measure(); onScroll(); });
+measure(); onScroll();
+
+/* ---------- magnetic buttons (desktop only) ---------- */
+if(fine && !reduced){
+  qsa('.mag').forEach(function(el){
+    el.addEventListener('mousemove', function(e){
+      var r = el.getBoundingClientRect();
+      var dx = (e.clientX - r.left - r.width/2) * 0.16;
+      var dy = (e.clientY - r.top - r.height/2) * 0.22;
+      el.style.transform = 'translate(' + clamp(dx,-8,8).toFixed(1) + 'px,' + clamp(dy,-7,7).toFixed(1) + 'px)';
+    });
+    el.addEventListener('mouseleave', function(){ el.style.transform = ''; });
+  });
+}
+
+/* ---------- ember particles (desktop hero only) ---------- */
+var cv = qs('#embers');
+if(cv && fine && !reduced && !mobile){
+  var ctx = cv.getContext('2d');
+  var P = [], N = 34, dpr = Math.min(w.devicePixelRatio || 1, 1.5), cw2 = 0, ch2 = 0;
+  function sizeCv(){
+    cw2 = hero.clientWidth; ch2 = hero.clientHeight;
+    cv.width = cw2*dpr; cv.height = ch2*dpr;
+    cv.style.width = cw2+'px'; cv.style.height = ch2+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+  }
+  sizeCv();
+  w.addEventListener('resize', sizeCv);
+  for(var i=0;i<N;i++){
+    P.push({ x: Math.random()*cw2, y: Math.random()*ch2, s: .8+Math.random()*1.7,
+      vy: .12+Math.random()*.4, vx: (Math.random()-.5)*.12, ph: Math.random()*6.28, hot: Math.random()>.5 });
+  }
+  var t = 0;
+  (function loop(){
+    requestAnimationFrame(loop);
+    if(!heroVisible) return;
+    t += .016;
+    ctx.clearRect(0,0,cw2,ch2);
+    for(var j=0;j<N;j++){
+      var p = P[j];
+      p.y -= p.vy; p.x += p.vx + Math.sin(t + p.ph)*.08;
+      if(p.y < -10){ p.y = ch2 + 10; p.x = Math.random()*cw2; }
+      if(p.x < -10) p.x = cw2+10; if(p.x > cw2+10) p.x = -10;
+      var a = .25 + .3*Math.abs(Math.sin(t*1.4 + p.ph));
+      ctx.beginPath();
+      ctx.fillStyle = p.hot ? 'rgba(255,170,90,'+a+')' : 'rgba(255,120,60,'+(a*.8)+')';
+      ctx.arc(p.x, p.y, p.s, 0, 6.283);
+      ctx.fill();
+    }
+  })();
+}
+})();
+</script>
+</body>
+</html>
