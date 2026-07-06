@@ -98,7 +98,7 @@ body.menu-open #menu a:nth-child(5){transition-delay:.24s}
 .hero-shade{position:absolute;inset:0;z-index:2;background:
   linear-gradient(180deg,rgba(11,10,9,.42) 0%,rgba(11,10,9,.18) 30%,rgba(11,10,9,.42) 58%,rgba(11,10,9,.94) 100%)}
 @media (max-width:700px){.hero-shade{background:
-  linear-gradient(180deg,rgba(11,10,9,.5) 0%,rgba(11,10,9,.3) 26%,rgba(11,10,9,.68) 52%,rgba(11,10,9,.97) 100%)}}
+  linear-gradient(180deg,rgba(11,10,9,.58) 0%,rgba(11,10,9,.28) 20%,rgba(11,10,9,.34) 46%,rgba(11,10,9,.6) 74%,rgba(11,10,9,.9) 100%)}}
 #embers{position:absolute;inset:0;z-index:3;pointer-events:none;mix-blend-mode:screen}
 .hero-content{position:relative;z-index:4;text-align:center;padding:0 5vw 12vh}
 .eyebrow{font-size:12.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--mut);margin-bottom:26px;font-weight:500}
@@ -292,7 +292,12 @@ footer em{font-family:var(--serif);font-style:italic;color:var(--mut)}
   .tile .lab{font-size:10.5px;padding:20px 8px 8px;letter-spacing:.03em}
   .gametiles{grid-template-columns:1fr 1fr}
   .gametiles .tile:first-child{grid-column:1/-1;aspect-ratio:2.1}
-  .hero-content{padding-bottom:15vh}
+  /* center the hero text vertically, and show more of the studio image (shorter hero = less side-crop) */
+  #hero{min-height:90svh;justify-content:center}
+  .hero-bg{inset:-3% 0}
+  .hero-content{padding:calc(var(--navh) + 6px) 5vw 6px}
+  .hero-sub{text-shadow:0 2px 14px rgba(0,0,0,.5)}
+  .scroll-cue{position:absolute;left:0;right:0;bottom:10px;margin-inline:auto}
   /* keep the sticky-stack + scale animation, but compact each card so it fits one phone screen
      (the desktop stack works because the card fits the viewport; make that true on phones too) */
   .app{top:calc(54px + var(--i)*8px);padding:22px 20px 24px;gap:14px}
